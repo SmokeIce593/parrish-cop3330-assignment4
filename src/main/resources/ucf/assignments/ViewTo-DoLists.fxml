@@ -24,21 +24,21 @@
          <children>
             <Button fx:id="ViewItems" mnemonicParsing="false" onAction="#ViewItemsButton" prefHeight="13.0" prefWidth="145.0" text="View Items" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="145.0" text="Delete List" />
+            <Button fx:id="DeleteList" mnemonicParsing="false" onAction="#DeleteListButton" prefHeight="10.0" prefWidth="145.0" text="Delete List" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="7.0" prefWidth="155.0" text="Add New To-Do" />
+            <Button fx:id="AddNewList" mnemonicParsing="false" onAction="#AddNewListButton" prefHeight="7.0" prefWidth="155.0" text="Add New To-Do" />
          </children>
       </VBox>
       <VBox layoutX="448.0" layoutY="88.0" prefHeight="299.0" prefWidth="133.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="139.0" text="Save All Lists" />
+            <Button fx:id="ExportAllLists" mnemonicParsing="false" onAction="#ExportAllListsButton" prefHeight="10.0" prefWidth="139.0" text="Save All Lists" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="133.0" />
-            <Button mnemonicParsing="false" prefHeight="16.0" prefWidth="140.0" text="Save Current List" />
+            <Button fx:id="ExportSelList" mnemonicParsing="false" onAction="#ExportSelListButton" prefHeight="16.0" prefWidth="140.0" text="Save Current List" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="133.0" />
-            <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="151.0" text="Import List" />
+            <Button fx:id="ImportList" mnemonicParsing="false" onAction="#ImportListButton" prefHeight="22.0" prefWidth="151.0" text="Import List" />
             <Separator opacity="0.0" prefHeight="120.0" prefWidth="133.0" />
             <Label text="Location" />
-            <TextField />
+            <TextField fx:id="FileLocation" />
          </children>
       </VBox>
    </children>

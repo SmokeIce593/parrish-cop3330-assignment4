@@ -27,6 +27,22 @@ public class AppController {
 
     // For Main View
     public Button ViewItems;
+    public Button DeleteList;
+    public Button AddNewList;
+    public Button ExportAllLists;
+    public Button ExportSelList;
+    public TextField FileLocation;
+
+    // For Create A To-Do List
+    public Button ToDoListSubmit;
+    public TextField ToDoCreateText;
+
+    // For Edit a To-Do List
+    public Button ToDoListSubmitE;
+    public TextField ToDoEditText;
+
+    // For Edit an Item
+    public Button ItemEditSubmit;
 
     // Initializer
     @FXML
@@ -47,7 +63,7 @@ public class AppController {
     // When the submit button is clicked it runs this
     // Add item to current to-do list based on the different labels
     // Then go back to the item view list based on the current to-do list
-    protected void CreateItem() throws IOException {
+    protected void CreateItemSubmitButton() throws IOException {
 
        /*
         Add item to to-Do list
@@ -120,6 +136,64 @@ public class AppController {
         Stage stage = (Stage) ViewItems.getScene().getWindow();
         stage.close();
 
+        Navigator.MainNavigate("DisplayItems.fxml");
+    }
+
+    @FXML
+    public void DeleteListButton() throws IOException {
+
+    }
+
+    @FXML
+    public void AddNewListButton() throws IOException {
+        Stage stage = (Stage) AddNewList.getScene().getWindow();
+        stage.close();
+
+        Navigator.MainNavigate("CreateAToDoList.fxml");
+    }
+
+    // Export/Import using the TextField File Location
+    @FXML
+    public void ExportAllListsButton() throws IOException {
+
+    }
+
+    @FXML
+    public void ExportSelListButton() throws IOException {
+
+    }
+
+    @FXML
+    public void ImportListButton() throws IOException {
+
+    }
+
+
+    // Submit Buttons
+
+    @FXML
+    public void AddListSubmitButton() throws IOException {
+        Stage stage = (Stage) ToDoListSubmit.getScene().getWindow();
+        stage.close();
+
+        Navigator.MainNavigate("ViewTo-DoLists.fxml");
+    }
+
+    @FXML
+    public void ToDoListSubmitEButton() throws IOException {
+        Stage stage = (Stage) ToDoListSubmitE.getScene().getWindow();
+        stage.close();
+
+        // Debating if I want this to navigate to DisplayItems.fxml
+        Navigator.MainNavigate("ViewTo-DoLists.fxml");
+    }
+
+    @FXML
+    public void ItemEditSubmitButton() throws IOException {
+        Stage stage = (Stage) ItemEditSubmit.getScene().getWindow();
+        stage.close();
+
+        // Debating if I want this to navigate to DisplayItems.fxml
         Navigator.MainNavigate("DisplayItems.fxml");
     }
 

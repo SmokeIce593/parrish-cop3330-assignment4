@@ -15,8 +15,8 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField layoutX="226.0" layoutY="215.0" />
-      <Button layoutX="274.0" layoutY="305.0" mnemonicParsing="false" text="Submit" />
+      <TextField fx:id="ToDoCreateText" layoutX="226.0" layoutY="215.0" />
+      <Button fx:id="ToDoListSubmit" layoutX="274.0" layoutY="305.0" mnemonicParsing="false" onAction="#AddListSubmitButton" text="Submit" />
       <Label layoutX="227.0" layoutY="192.0" prefHeight="17.0" prefWidth="41.0" text="Name" />
       <Label alignment="CENTER" layoutX="138.0" layoutY="101.0" prefHeight="45.0" prefWidth="318.0" text="Create a To-Do List" textAlignment="CENTER">
          <font>
