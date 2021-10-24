@@ -13,7 +13,7 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <ListView layoutX="14.0" layoutY="88.0" prefHeight="306.0" prefWidth="200.0" />
+      <ListView fx:id="MasterList" layoutX="14.0" layoutY="88.0" prefHeight="306.0" prefWidth="200.0" />
       <Label layoutX="17.0" layoutY="56.0" prefHeight="32.0" prefWidth="91.0" text="To-Do List">
          <font>
             <Font size="20.0" />

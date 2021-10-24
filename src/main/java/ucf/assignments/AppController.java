@@ -5,7 +5,8 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AppController {
     @FXML
@@ -32,6 +33,7 @@ public class AppController {
     public Button ExportAllLists;
     public Button ExportSelList;
     public TextField FileLocation;
+    public ListView MasterList;
 
     // For Create A To-Do List
     public Button ToDoListSubmit;
@@ -44,14 +46,25 @@ public class AppController {
     // For Edit an Item
     public Button ItemEditSubmit;
 
+
+    // Create an Initial ToDoList
+    List<ToDoListMain.ToDoList> MainList = new ArrayList<ToDoListMain.ToDoList>();
+
     // Initializer
     @FXML
     public void initialize() {
         try {
-            ItemListView.getItems().add("Item 1");
-            FilterChoices.getItems().add("All");
-            FilterChoices.getItems().add("Complete");
-            FilterChoices.getItems().add("Incomplete");
+            // Add FilterChoices (There probably is a better way to do this or the scene swapping)
+            //FilterChoices.getItems().add("All");
+            //FilterChoices.getItems().add("Complete");
+            //FilterChoices.getItems().add("Incomplete");
+
+            /*
+            Here we want to to display the Master List
+            iterate through length of master list
+            get obj string name at each instance and add that via
+            MasterList.getItems().add(String);
+             */
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -73,7 +86,7 @@ public class AppController {
         This adds the item to the current to-do list
         */
         //String Date = CreateItemDate.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-       // ItemCreator.CreateItem(CreateItemName.getText(), CreateItemDescription.getText(), Date, (String)CreateItemStatus.getValue());
+       // ItemMain.CreateItem(CreateItemName.getText(), CreateItemDescription.getText(), Date, (String)CreateItemStatus.getValue());
 
         //This closes the current window
 
@@ -141,7 +154,20 @@ public class AppController {
 
     @FXML
     public void DeleteListButton() throws IOException {
+        // Here we want to remove the List from the master list (Display)
+        // We also want to remove the list from the main list
 
+     /*
+     This finds the string and removes that instance from the arraylist. This returns ArrayList<ToDoListMain.ToDoList>
+     MainList = ToDoListMain.DestroyList(MainList, MasterList.getSelectionModel().getSelectedItem() (Will return a string));
+
+      Now this has been removed from the main list we need to make it reflect in our ListView
+      Clear the Master list and readd all to-do lists back from master list
+      MasterList.getItems().clear();
+      iterate through length of master list
+      get obj string name at each instance and add that via
+      MasterList.getItems().add(String);
+      */
     }
 
     @FXML
@@ -175,6 +201,9 @@ public class AppController {
     public void AddListSubmitButton() throws IOException {
         Stage stage = (Stage) ToDoListSubmit.getScene().getWindow();
         stage.close();
+
+        // Creates and adds item to list based on the text value
+        ToDoListMain.CreateList(MainList, ToDoCreateText.getText());
 
         Navigator.MainNavigate("ViewTo-DoLists.fxml");
     }
