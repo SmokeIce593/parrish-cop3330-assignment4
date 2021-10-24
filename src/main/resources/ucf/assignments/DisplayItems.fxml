@@ -23,16 +23,16 @@
          <children>
             <Button fx:id="EditItem" mnemonicParsing="false" onAction="#EditItemButton" prefHeight="13.0" prefWidth="145.0" text="Edit Item" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="145.0" text="Delete Item" />
+            <Button fx:id="DeleteItem" mnemonicParsing="false" onAction="#DeleteItemButton" prefHeight="10.0" prefWidth="145.0" text="Delete Item" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="7.0" prefWidth="155.0" text="Add Item" />
+            <Button fx:id="CreateItem" mnemonicParsing="false" onAction="#CreateItemButton" prefHeight="7.0" prefWidth="155.0" text="Add Item" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Mark Item as Complete" />
+            <Button fx:id="MarkAsComplete" mnemonicParsing="false" onAction="#MarkAsCompleteButton" prefHeight="25.0" prefWidth="150.0" text="Mark Item as Complete" />
             <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="193.0" text="Edit To-Do List" />
+            <Button fx:id="EditList" mnemonicParsing="false" onAction="#EditListButton" prefHeight="25.0" prefWidth="193.0" text="Edit To-Do List" />
          </children>
       </VBox>
       <Button layoutX="-4.0" layoutY="-6.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="46.0" text="Back" />
-      <ChoiceBox layoutX="64.0" layoutY="60.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="FilterChoices" layoutX="64.0" layoutY="60.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

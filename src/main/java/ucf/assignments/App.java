@@ -10,7 +10,7 @@ import java.io.IOException;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("CreateAnItem.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ViewTo-DoLists.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 480);
         stage.setTitle("To-Do-Application");
         stage.setScene(scene);
