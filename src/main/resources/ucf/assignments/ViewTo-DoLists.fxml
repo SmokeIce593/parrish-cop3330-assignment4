@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.AppController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff" height="53.0" stroke="#0084ff" strokeType="INSIDE" width="671.0" AnchorPane.leftAnchor="0.0" />
+      <Label alignment="CENTER" layoutX="31.0" layoutY="6.0" prefHeight="45.0" prefWidth="625.0" text="To-Do Application">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ListView layoutX="14.0" layoutY="88.0" prefHeight="306.0" prefWidth="200.0" />
+      <Label layoutX="17.0" layoutY="56.0" prefHeight="32.0" prefWidth="91.0" text="To-Do List">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff" height="306.0" layoutX="441.0" layoutY="85.0" stroke="#0084ff" strokeType="INSIDE" width="145.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff" height="306.0" layoutX="227.0" layoutY="85.0" stroke="#0084ff" strokeType="INSIDE" width="157.0" />
+      <VBox layoutX="233.0" layoutY="91.0" prefHeight="293.0" prefWidth="145.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="13.0" prefWidth="145.0" text="View Items" />
+            <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
+            <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="145.0" text="Delete List" />
+            <Separator opacity="0.0" prefHeight="30.0" prefWidth="145.0" />
+            <Button mnemonicParsing="false" prefHeight="7.0" prefWidth="155.0" text="Add New To-Do" />
+         </children>
+      </VBox>
+      <VBox layoutX="448.0" layoutY="88.0" prefHeight="299.0" prefWidth="133.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="10.0" prefWidth="139.0" text="Save All Lists" />
+            <Separator opacity="0.0" prefHeight="30.0" prefWidth="133.0" />
+            <Button mnemonicParsing="false" prefHeight="16.0" prefWidth="140.0" text="Save Current List" />
+            <Separator opacity="0.0" prefHeight="30.0" prefWidth="133.0" />
+            <Button mnemonicParsing="false" prefHeight="22.0" prefWidth="151.0" text="Import List" />
+            <Separator opacity="0.0" prefHeight="120.0" prefWidth="133.0" />
+            <Label text="Location" />
+            <TextField />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

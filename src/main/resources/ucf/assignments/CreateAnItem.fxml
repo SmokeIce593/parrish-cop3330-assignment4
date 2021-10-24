@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.AppController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8f8f8" height="356.0" layoutX="137.0" layoutY="43.0" stroke="#838080" strokeType="INSIDE" width="318.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff" height="53.0" stroke="#0084ff" strokeType="INSIDE" width="600.0" AnchorPane.leftAnchor="0.0" />
+      <Button mnemonicParsing="false" prefHeight="53.0" prefWidth="41.0" text="Back" />
+      <Label alignment="CENTER" layoutX="31.0" layoutY="6.0" prefHeight="45.0" prefWidth="541.0" text="To-Do Application">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="CreateItemName" layoutX="226.0" layoutY="149.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="CreateItemSubmit" layoutX="274.0" layoutY="367.0" mnemonicParsing="false" onAction="#CreateItem" prefHeight="17.0" prefWidth="54.0" text="Submit" />
+      <Label layoutX="227.0" layoutY="128.0" prefHeight="25.0" prefWidth="41.0" text="Name" />
+      <Label alignment="CENTER" layoutX="138.0" layoutY="62.0" prefHeight="45.0" prefWidth="318.0" text="Create an Item" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font></Label>
+      <Label layoutX="226.0" layoutY="176.0" prefHeight="25.0" prefWidth="61.0" text="Description" />
+      <TextField fx:id="CreateItemDescription" layoutX="225.0" layoutY="204.0" prefHeight="17.0" prefWidth="149.0" />
+      <Label layoutX="225.0" layoutY="232.0" prefHeight="25.0" prefWidth="50.0" text="Due Date" />
+      <DatePicker fx:id="CreateItemDate" layoutX="225.0" layoutY="255.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="225.0" layoutY="289.0" prefHeight="25.0" prefWidth="33.0" text="Status" />
+      <ChoiceBox fx:id="CreateItemStatus" layoutX="222.0" layoutY="314.0" prefHeight="25.0" prefWidth="149.0" />
+   </children>
+</AnchorPane>
