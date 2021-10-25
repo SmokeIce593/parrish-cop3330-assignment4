@@ -218,7 +218,7 @@ public class AppController {
         stage.close();
 
         // Creates and adds item to list based on the text value
-        ToDoListMain.EditList(MainList, ToDoCreateText.getText());
+        //ToDoListMain.EditList(MainList, ToDoCreateText.getText(), CurrentList name);
 
         // Debating if I want this to navigate to DisplayItems.fxml
         Navigator.MainNavigate("ViewTo-DoLists.fxml");

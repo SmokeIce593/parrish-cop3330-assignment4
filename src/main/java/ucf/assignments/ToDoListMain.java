@@ -19,14 +19,15 @@ public class ToDoListMain {
         return null;
     }
 
-    public static List<ToDoList> EditList(List<ToDoList> MainList, String listname){
+    public static List<ToDoList> EditList(List<ToDoList> MainList, String newname, String listname){
         // Create a ToDoList object
         // Iterate through main list to check when an object inside contains listname
         // for i=0; i<MainList.size(); i++
         // using MainList.get(i) (you get the object)
         // get obj instance string name
+        // Compare strings if true:
         // Copy over obj instance to new object and change name based on listname
-        // Compare strings if true MainList.Set() and then return Mainlist
+        // MainList.Set() name to newname and then return Mainlist
 
         return null;
     }
