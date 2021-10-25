@@ -10,6 +10,8 @@ import java.util.List;
 
 public class AppController {
     @FXML
+
+    // CreateItem
     public TextField CreateItemName;
     public TextField CreateItemDescription;
     public DatePicker CreateItemDate;
@@ -45,10 +47,19 @@ public class AppController {
 
     // For Edit an Item
     public Button ItemEditSubmit;
-
+    public TextField EditItemName;
+    public TextField EditItemDescription;
+    public DatePicker EditItemDate;
+    public ChoiceBox EditItemStatus;
 
     // Create an Initial ToDoList
     List<ToDoListMain.ToDoList> MainList = new ArrayList<ToDoListMain.ToDoList>();
+
+    // Create a Current ToDoList
+    ToDoListMain.ToDoList CurrentList = new ToDoListMain.ToDoList();
+
+    // Create a Current Item
+    ItemMain.Items CurrentItem = new ItemMain.Items();
 
     // Initializer
     @FXML
@@ -65,47 +76,34 @@ public class AppController {
             get obj string name at each instance and add that via
             MasterList.getItems().add(String);
              */
+            /*
+            Here we want to to display the ItemListView
+            iterate through length of ItemListView
+            get obj string name at each instance and add that via
+            ItemListView.getItems().add(String);
+             */
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 
-    @FXML
-    // Premise of Method:
-    // When the submit button is clicked it runs this
-    // Add item to current to-do list based on the different labels
-    // Then go back to the item view list based on the current to-do list
-    protected void CreateItemSubmitButton() throws IOException {
-
-       /*
-        Add item to to-Do list
-        Get current stage and close
-        Then go back to the previous display using Navigator.MainNavigate
-
-        This adds the item to the current to-do list
-        */
-        //String Date = CreateItemDate.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
-       // ItemMain.CreateItem(CreateItemName.getText(), CreateItemDescription.getText(), Date, (String)CreateItemStatus.getValue());
-
-        //This closes the current window
 
 
-            Stage stage = (Stage) CreateItemSubmit.getScene().getWindow();
-            stage.close();
-
-       // This opens the previous window
-            Navigator.MainNavigate("DisplayItems.fxml");
-
-
-
-
-    }
     // Navigates to Edit Item page
     @FXML
     public void EditItemButton() throws IOException {
         Stage stage = (Stage) EditItem.getScene().getWindow();
         stage.close();
+
+        // This sets all the fields to the item you clicked on
+        // CurrentItem = EditItemGetObj(ToDoListMain.ToDoList CurrentList, EditItemName.getText())
+        // This now needs to add the values that you clicked on
+        // Using CurrentItem get all values from this and set them to correct fields
+       // EditItemName
+       // EditItemDescription
+       // EditItemDate
+        // EditItemStatus
 
         Navigator.MainNavigate("EditAnItem.fxml");
     }
@@ -125,6 +123,10 @@ public class AppController {
         stage.close();
 
         Navigator.MainNavigate("EditAToDoList.fxml");
+
+        // This now needs to add the value that you clicked on
+        // Using CurrentList get all values from this and set the name field
+        //ToDoEditText equal to the CurrentList name
     }
 
     @FXML
@@ -142,7 +144,7 @@ public class AppController {
     // To save time this will be shown there only
 
 
-    // Everything onward is from the main page
+    // Main Page
 
     @FXML
     public void ViewItemsButton() throws IOException {
@@ -150,6 +152,8 @@ public class AppController {
         stage.close();
 
         Navigator.MainNavigate("DisplayItems.fxml");
+        // Puts the current Obj into this reference
+        //CurrentList = ToDoListMain.EditListGetObj(MainList, MasterList.getSelectionModel().getSelectedItem())
     }
 
     @FXML
@@ -213,6 +217,9 @@ public class AppController {
         Stage stage = (Stage) ToDoListSubmitE.getScene().getWindow();
         stage.close();
 
+        // Creates and adds item to list based on the text value
+        ToDoListMain.EditList(MainList, ToDoCreateText.getText());
+
         // Debating if I want this to navigate to DisplayItems.fxml
         Navigator.MainNavigate("ViewTo-DoLists.fxml");
     }
@@ -222,7 +229,34 @@ public class AppController {
         Stage stage = (Stage) ItemEditSubmit.getScene().getWindow();
         stage.close();
 
-        // Debating if I want this to navigate to DisplayItems.fxml
+
+        Navigator.MainNavigate("DisplayItems.fxml");
+    }
+
+    @FXML
+    // Premise of Method:
+    // When the submit button is clicked it runs this
+    // Add item to current to-do list based on the different labels
+    // Then go back to the item view list based on the current to-do list
+    public void CreateItemSubmitButton() throws IOException {
+
+       /*
+        Add item to to-Do list
+        Get current stage and close
+        Then go back to the previous display using Navigator.MainNavigate
+
+        This adds the item to the current to-do list
+        */
+        //String Date = CreateItemDate.getValue().format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+        // ItemMain.CreateItem(CurrentList, CreateItemName.getText(), CreateItemDescription.getText(), Date, (String)CreateItemStatus.getValue());
+
+        //This closes the current window
+
+
+        Stage stage = (Stage) CreateItemSubmit.getScene().getWindow();
+        stage.close();
+
+        // This opens the previous window
         Navigator.MainNavigate("DisplayItems.fxml");
     }
 

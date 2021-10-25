@@ -6,7 +6,7 @@ public class ToDoListMain {
 
     // This is a ToDoList
     // Contains a List of Items and a name for the todo list
-    public class ToDoList{
+    public static class ToDoList{
         String Name;
         List<ItemMain.Items> ItemList;
     }
@@ -18,6 +18,29 @@ public class ToDoListMain {
 
         return null;
     }
+
+    public static List<ToDoList> EditList(List<ToDoList> MainList, String listname){
+        // Create a ToDoList object
+        // Iterate through main list to check when an object inside contains listname
+        // for i=0; i<MainList.size(); i++
+        // using MainList.get(i) (you get the object)
+        // get obj instance string name
+        // Copy over obj instance to new object and change name based on listname
+        // Compare strings if true MainList.Set() and then return Mainlist
+
+        return null;
+    }
+
+    public static ToDoList EditListGetObj(List<ToDoList> MainList, String listname){
+        // Create a ToDoList object
+        // Iterate through main list to check when an object inside contains listname
+        // for i=0; i<MainList.size(); i++
+        // using MainList.get(i) (you get the object)
+        // if MainList name is the same as listname return toDoList object
+        return null;
+    }
+
+
 
     public static List<ToDoList> DestroyList(List<ToDoList> MainList, String listname){
        // Iterate through main list to check when an object inside contains listname
