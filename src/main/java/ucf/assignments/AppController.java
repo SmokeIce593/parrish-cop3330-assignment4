@@ -18,7 +18,7 @@ public class AppController {
     public ChoiceBox CreateItemStatus;
     public Button CreateItemSubmit;
 
-    // For MainNavigate
+    // For DisplayItems
     public Button EditItem;
     public Button CreateItem;
     public Button DeleteItem;
@@ -131,7 +131,19 @@ public class AppController {
 
     @FXML
     public void DeleteItemButton() throws IOException {
+        // We also want to remove the selected item from the current list
 
+     /*
+     This finds the string (or id) and removes that instance from the arraylist. This returns ArrayList<ToDoListMain.ToDoList>
+     CurrentList = ItemMain.DestroyItem(CurrentList, CurrentItem (Might be better to do current selected item)));
+
+      Now this has been removed from the currentlist we need to make it reflect in our ListView
+      Clear the ItemListView and readd all items back from master list (We could also just remove the one item from the list)
+      ItemListView.getItems().clear();
+      iterate through length of master list
+      get obj string name at each instance and add that via
+      MasterList.getItems().add(String);
+      */
     }
 
     @FXML
@@ -185,17 +197,20 @@ public class AppController {
     // Export/Import using the TextField File Location
     @FXML
     public void ExportAllListsButton() throws IOException {
-
+        // We need to Export all Lists
+       //MainList = ExportAllList(MainList)
     }
 
     @FXML
     public void ExportSelListButton() throws IOException {
-
+        // We need to Export the selected list
+        //CurrentList = ExportSelList(MasterList.getSelectionModel().getSelectedItem())
     }
 
     @FXML
     public void ImportListButton() throws IOException {
-
+        // We need to import the saved lists
+        // MainList = ImportLists(MainList)
     }
 
 
@@ -259,6 +274,7 @@ public class AppController {
         // This opens the previous window
         Navigator.MainNavigate("DisplayItems.fxml");
     }
+
 
 
 
