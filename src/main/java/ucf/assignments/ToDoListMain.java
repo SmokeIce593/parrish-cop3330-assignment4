@@ -12,9 +12,9 @@ public class ToDoListMain {
     // This is a ToDoList
     // Contains a List of Items and a name for the todo list
     public static class ToDoList{
-        int ID;
-        String Name;
-        List<ItemMain.Items> ItemList;
+        private int ID;
+        private String Name;
+        private List<ItemMain.Items> ItemList;
     }
 
     public static List<ToDoList> CreateList(List<ToDoList> MainList, String name){

@@ -58,13 +58,13 @@ public class AppController {
     public ChoiceBox EditItemStatus;
 
     // Create an Initial ToDoList
-    List<ToDoListMain.ToDoList> MainList = new ArrayList<ToDoListMain.ToDoList>();
+    public List<ToDoListMain.ToDoList> MainList = new ArrayList<ToDoListMain.ToDoList>();
 
     // Create a Current ToDoList
-    ToDoListMain.ToDoList CurrentList = new ToDoListMain.ToDoList();
+    public ToDoListMain.ToDoList CurrentList = new ToDoListMain.ToDoList();
 
     // Create a Current Item
-    ItemMain.Items CurrentItem = new ItemMain.Items();
+    public ItemMain.Items CurrentItem = new ItemMain.Items();
 
     // Initializer
     @FXML
