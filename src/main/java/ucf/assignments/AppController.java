@@ -1,3 +1,7 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Cameron Parrish
+ */
 package ucf.assignments;
 
 import javafx.fxml.FXML;
@@ -26,6 +30,7 @@ public class AppController {
     public Button EditList;
     public ChoiceBox FilterChoices;
     public ListView ItemListView;
+    public Button ConfirmFilter;
 
 
     // For Main View
@@ -69,6 +74,7 @@ public class AppController {
             //FilterChoices.getItems().add("All");
             //FilterChoices.getItems().add("Complete");
             //FilterChoices.getItems().add("Incomplete");
+            //FilterChoices.setValue("All");
 
             /*
             Here we want to to display the Master List
@@ -82,6 +88,7 @@ public class AppController {
             get obj string name at each instance and add that via
             ItemListView.getItems().add(String);
              */
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -204,7 +211,7 @@ public class AppController {
     @FXML
     public void ExportSelListButton() throws IOException {
         // We need to Export the selected list
-        //CurrentList = ExportSelList(MasterList.getSelectionModel().getSelectedItem())
+        //CurrentList = ExportSelList(MasterList, MasterList.getSelectionModel().getSelectedItem())
     }
 
     @FXML
@@ -273,6 +280,28 @@ public class AppController {
 
         // This opens the previous window
         Navigator.MainNavigate("DisplayItems.fxml");
+    }
+
+    @FXML
+    public void ConfirmFilterButton() throws IOException {
+       // Check what type of filter needs to be done
+        //List<ToDoListMain.ToDoList> FilterList = new ArrayList<ToDoListMain.ToDoList>();
+        /*
+       if(FilterChoices.getValue() == "All"){
+           AllItems(ToDoListMain.ToDoList CurrentList)
+        }
+       else if(FilterChoices.getValue() == "Complete"){
+           CompleteItems(ToDoListMain.ToDoList CurrentList)
+       }
+       else{
+           InCompleteItems(ToDoListMain.ToDoList CurrentList)
+       }
+
+       We then need to apply this filter.
+       iterate through length of filter list (item section)
+       get obj string name at each instance and add that via
+       ItemListView.getItems().add(String);
+             */
     }
 
 

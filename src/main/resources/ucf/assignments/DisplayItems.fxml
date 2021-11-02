@@ -33,6 +33,7 @@
          </children>
       </VBox>
       <Button layoutX="-4.0" layoutY="-6.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="46.0" text="Back" />
-      <ChoiceBox fx:id="FilterChoices" layoutX="64.0" layoutY="60.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="FilterChoices" layoutX="64.0" layoutY="60.0" prefHeight="25.0" prefWidth="105.0" />
+      <Button fx:id="ConfirmFilter" layoutX="169.0" layoutY="60.0" mnemonicParsing="false" onAction="#ConfirmFilterButton" text="Confirm" />
    </children>
 </AnchorPane>

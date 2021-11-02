@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Cameron Parrish
+ */
+
 package ucf.assignments;
 
 import java.util.ArrayList;
@@ -15,7 +20,7 @@ public class ItemMain {
 
 
 
-    public static List<Items> CreateItem(ToDoListMain.ToDoList CurrentList, String Name, String Description, String Duedate, String Status){
+    public static ToDoListMain.ToDoList CreateItem(ToDoListMain.ToDoList CurrentList, String Name, String Description, String Duedate, String Status){
         // Create an object using inputs pulled in from AppController
         // Add object to List<ItemMain.Items> currentlist
         // Return List<ItemMain.Items> currentlist
@@ -24,7 +29,7 @@ public class ItemMain {
         return null;
     }
 
-    public static List<Items> EditItem(ToDoListMain.ToDoList CurrentList, ItemMain.Items CurrentItem,  String Name, String Description, String Duedate, String Status){
+    public static ToDoListMain.ToDoList EditItem(ToDoListMain.ToDoList CurrentList, ItemMain.Items CurrentItem,  String Name, String Description, String Duedate, String Status){
         // Iterate through currentlist to check when an object inside contains listname
         // for i=0; i<CurrentList.size(); i++
         // using CurrentList.get(i) (you get the object)
@@ -50,7 +55,7 @@ public class ItemMain {
         return null;
     }
 
-    public static List<Items> DestroyItem(ToDoListMain.ToDoList CurrentList, ItemMain.Items CurrentItem){
+    public static ToDoListMain.ToDoList DestroyItem(ToDoListMain.ToDoList CurrentList, ItemMain.Items CurrentItem){
         // Iterate through current list to check when an object inside contains id of selected item
         // for i=0; i<CurrentList.size(); i++
         // using CurrentList.get(i) (you get the object)

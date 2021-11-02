@@ -1,5 +1,10 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Cameron Parrish
+ */
 package ucf.assignments;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ToDoListMain {
@@ -13,9 +18,10 @@ public class ToDoListMain {
     }
 
     public static List<ToDoList> CreateList(List<ToDoList> MainList, String name){
+        //List<ToDoList> CreateList = new ArrayList<ToDoList>();
         // Create a ToDoList object
         // Add ToDoList object to List<ToDoList> MainList
-        // Return ToDoList
+        // Return MainList
 
         return null;
     }
@@ -44,7 +50,7 @@ public class ToDoListMain {
 
 
 
-    public static List<ToDoList> DestroyList(List<ToDoList> MainList, ToDoListMain.ToDoList CurrentList, String listname){
+    public static List<ToDoList> DestroyList(List<ToDoList> MainList, String listname){
        // Iterate through main list to check when an object inside contains listname
         // for i=0; i<MainList.size(); i++
         // using MainList.get(i) (you get the object)
@@ -53,7 +59,7 @@ public class ToDoListMain {
         return null;
     }
 
-    public static ToDoList ExportSelList(ToDoListMain.ToDoList CurrentList){
+    public static ToDoList ExportSelList(List<ToDoList> MainList, ToDoListMain.ToDoList CurrentList){
         // Needs to go through and export list.
         /*
             try
@@ -84,7 +90,7 @@ public class ToDoListMain {
             catch (IOException e){}
         }
 
-        // Return current array
+        // Return MainList
          */
         return null;
     }
@@ -122,7 +128,7 @@ public class ToDoListMain {
             catch (IOException e){}
         }
 
-        // Return current array
+        // Return MainList
          */
         return null;
     }
@@ -156,6 +162,7 @@ public class ToDoListMain {
     }
 
          */
+        // Return mainlist
         return null;
     }
 
