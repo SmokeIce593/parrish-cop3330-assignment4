@@ -155,7 +155,7 @@ public class AppController {
 
     @FXML
     public void MarkAsCompleteButton() throws IOException {
-
+        //Quality of life. May not add. You can go through and edit this in the edit menu already.
     }
 
     // For all back buttons it will need to revert back to the previous page
